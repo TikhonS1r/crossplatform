@@ -16,32 +16,9 @@ CWinApp theApp;
 
 using namespace std;
 
-int main()
-{
-    int nRetCode = 0;
+#include <iostream>
 
-    HMODULE hModule = ::GetModuleHandle(nullptr);
-
-    if (hModule != nullptr)
-    {
-        // инициализировать MFC, а также печать и сообщения об ошибках про сбое
-        if (!AfxWinInit(hModule, nullptr, ::GetCommandLine(), 0))
-        {
-            // TODO: вставьте сюда код для приложения.
-            wprintf(L"Критическая ошибка: сбой при инициализации MFC\n");
-            nRetCode = 1;
-        }
-        else
-        {
-            // TODO: вставьте сюда код для приложения.
-        }
-    }
-    else
-    {
-        // TODO: измените код ошибки в соответствии с потребностями
-        wprintf(L"Критическая ошибка: сбой GetModuleHandle\n");
-        nRetCode = 1;
-    }
-
-    return nRetCode;
+int main() {
+    std::cout << "Hello World!";
+    return 0;
 }
